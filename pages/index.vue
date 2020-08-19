@@ -22,16 +22,28 @@
         >
           GitHub
         </a>
+        <div>
+          <div v-for="(doc, index) in docs" :key="index">
+            <h1>{{ doc.title }}</h1>
+            <img class="post-image" :src="doc.picture" alt="" />
+            <p>{{ doc.description }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData({ $content }) {
+    const docs = await $content('/blog').without(['body', 'toc']).fetch()
+    return { docs }
+  },
+}
 </script>
 
-<style>
+<style lang="scss">
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -47,7 +59,7 @@ export default {}
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  color: $titlecolor;
   letter-spacing: 1px;
 }
 
@@ -61,5 +73,8 @@ export default {}
 
 .links {
   padding-top: 15px;
+}
+.post-image {
+  width: 200px;
 }
 </style>
