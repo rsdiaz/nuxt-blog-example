@@ -1,6 +1,42 @@
 @charset "utf-8";
 
-$titlecolor: red;
-@import "~bulma/sass/utilities/_all.sass";
-@import "~bulma/sass/base/_all.sass";
 
+// Import only what you need from Bulma
+
+/* @import "~bulma/sass/utilities/_all.sass";
+@import "~bulma/sass/base/_all.sass";
+@import "~bulma/sass/elements/button.sass";
+@import "~bulma/sass/elements/container.sass";
+@import "~bulma/sass/elements/title.sass";
+@import "~bulma/sass/elements/content.sass";
+@import "~bulma/sass/elements/image.sass";
+@import "~bulma/sass/elements/icon.sass";
+@import "~bulma/sass/form/_all.sass";
+@import "~bulma/sass/grid/columns.sass";
+@import "~bulma/sass/components/navbar.sass";
+@import "~bulma/sass/layout/hero.sass";
+@import "~bulma/sass/layout/section.sass";
+@import "~bulma/sass/helpers/typography.sass";
+@import "~bulma/sass/helpers/color.sass"; */
+
+@import "~bulma";
+
+.icon.icon-link {
+  background-image: url('~assets/svg/icon-hashtag.svg');
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+}
+
+.title-container {
+  .date {
+   color: $grey-light;
+  }
+}
+
+@include mobile {
+  .title-container .background-cover {
+    background-image: none !important;
+  }  
+}

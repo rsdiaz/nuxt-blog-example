@@ -1,10 +1,8 @@
 <template>
-  <div class="container">
+  <div>
     <div>
       <Logo />
-      <h1 class="title">
-        nuxt-blog-example
-      </h1>
+      <h1 class="title">nuxt-blog-example</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -23,9 +21,13 @@
           GitHub
         </a>
         <div>
-          <div v-for="(doc, index) in docs" :key="index">
+          <div
+            v-for="(doc, index) in docs"
+            :key="index"
+            @click="goToDoc(doc.slug)"
+          >
             <h1>{{ doc.title }}</h1>
-            <img class="post-image" :src="doc.picture" alt="" />
+            <img class="post-image" :src="doc.picture" alt />
             <p>{{ doc.description }}</p>
           </div>
         </div>
@@ -40,10 +42,15 @@ export default {
     const docs = await $content('/blog').without(['body', 'toc']).fetch()
     return { docs }
   },
+  methods: {
+    goToDoc(slug) {
+      this.$router.push({ path: `/blog/${slug}` })
+    },
+  },
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -51,16 +58,6 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: $titlecolor;
-  letter-spacing: 1px;
 }
 
 .subtitle {

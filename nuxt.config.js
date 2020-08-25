@@ -29,7 +29,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~assets/scss/main.scss'],
+  styleResources: {
+    // your settings here
+    scss: [],
+  },
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -50,16 +54,10 @@ export default {
     '@nuxtjs/stylelint-module',
     '@nuxtjs/style-resources',
   ],
-  styleResources: {
-    // your settings here
-    scss: ['~assets/scss/main.scss'],
-  },
   /*
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    // '@nuxtjs/bulma',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
@@ -68,7 +66,14 @@ export default {
    ** Content module configuration
    ** See https://content.nuxtjs.org/configuration
    */
-  content: {},
+  content: {
+    liveEdit: false,
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-atom-dark.css',
+      },
+    },
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
