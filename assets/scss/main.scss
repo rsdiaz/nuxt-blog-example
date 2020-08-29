@@ -22,11 +22,7 @@
 @import "~bulma";
 
 .icon.icon-link {
-  background-image: url('~assets/svg/icon-hashtag.svg');
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
+  display: none;
 }
 
 .title-container {
@@ -39,4 +35,12 @@
   .title-container .background-cover {
     background-image: none !important;
   }  
+}
+
+.card, .box, .message {
+  border: 1px solid #eee;
+}
+
+.card {
+  border-radius: 6px;
 }

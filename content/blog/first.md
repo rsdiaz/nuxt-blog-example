@@ -7,12 +7,14 @@ alt: mi primer post con nuxt
 category: JavaScript
 author:
   name: Roberto Serrano Diaz-Grande
-  bio: Web Developer
-  img: https://www.robertoserrano.pro/assets/img/roberto-serrano.jpg?v=a7e19cc15f
+  bio: Entusiasta de HTML, CSS, JavaScript, Node.js, Vue, etc... Comparto mi aprendizaje y conocimiento a traves de mi blog, en el cual publico artículos sobre desarrollo web y mi día a día tecnológico.
+  img: https://res.cloudinary.com/rserrano/image/upload/v1598652059/roberto-serrano-desarrolloweb-tarragona.jpg
 ---
 
-## Esto en un encabezado h2
+## Esto en un titulo de una sección
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+
+![Philadelphia's Magic Gardens. This place was so cool!](https://res.cloudinary.com/rserrano/image/upload/v1598651941/samples/ecommerce/analog-classic.jpg "Philadelphia's Magic Gardens")
 
 <info-box>
   <template #info-box>
@@ -23,31 +25,24 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque ri
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
 
 
-### Esto en un encabezado h3
+### Esto en un subtitulo de una sección
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
 
-### Esto es otro encabezado h3
+### Esto en un subtitulo de una sección
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
 
-## Esto en un encabezado h2
+## Esto en un titulo de otra sección
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
 
-```js[nuxt.config.js]
+```js
 export default {
   nuxt: 'is the best'
 }
 ```
 
-```html[index.html]
+```html
 <p>code styling is easy</p>
 ```
-
-
-<div class="message is-warning">
-  <div class="message-body">
-    <p>This is HTML inside markdown that has a class of note</p>
-  </div>
-</div>

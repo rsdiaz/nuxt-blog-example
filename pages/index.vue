@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <div>
       <Logo />
       <h1 class="title">nuxt-blog-example</h1>
@@ -33,6 +34,7 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 

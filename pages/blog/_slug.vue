@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <article class="section is-medium">
       <header>
         <div class="title-container mb-4">
@@ -9,7 +10,7 @@
             :style="{ backgroundImage: 'url(' + article.picture + ')' }"
           >
             <div class="background-shroud">
-              <p class="title has-text-centered">
+              <p class="title has-text-centered is-2">
                 {{ article.title }}
               </p>
               <p class="date has-text-centered has-text-weight-light">
@@ -51,6 +52,7 @@
         <author :author="article.author" />
       </div>
     </article>
+    <Footer />
   </div>
 </template>
 
@@ -74,14 +76,16 @@ export default {
   h3,
   h4 {
     font-weight: bold;
-    padding-bottom: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.25;
   }
 }
 .nuxt-content h2 {
-  font-size: 1.5rem;
+  font-size: 1.875rem;
 }
 .nuxt-content h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 .nuxt-content p {
   margin-bottom: 20px;

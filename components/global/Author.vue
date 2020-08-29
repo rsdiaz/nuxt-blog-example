@@ -1,10 +1,25 @@
 <template>
-  <div>
-    <img :src="author.img" />
-    <div>
-      <h4>Author</h4>
-      <p>{{ author.name }}</p>
-      <p>{{ author.bio }}</p>
+  <div class="card has-background-info-light">
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-64x64">
+            <img
+              :src="author.img"
+              alt="Roberto Serrano desarrollo web Tarragona"
+            />
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-5">{{ author.name }}</p>
+          <p class="subtitle is-6">
+            <a href="https://twitter.com/Rovbeat">@Rovbeat</a>
+          </p>
+        </div>
+      </div>
+      <div class="content">
+        {{ author.bio }}
+      </div>
     </div>
   </div>
 </template>
