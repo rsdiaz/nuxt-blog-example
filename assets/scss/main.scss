@@ -1,5 +1,7 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&display=swap');
 
+$family-sans-serif : 'Montserrat', sans-serif;
 
 // Import only what you need from Bulma
 
@@ -24,7 +26,24 @@
 .icon.icon-link {
   display: none;
 }
-
+.hero {
+  p {
+    margin-top: 1rem;
+  }
+  .profile-pic {
+    margin: 0 auto;
+    width: 170px;
+    height: 170px;
+  }
+  a {
+    text-decoration: underline;
+  }
+  @include mobile {
+    .title {
+      text-align: center;
+    }
+  }
+}
 .title-container {
   .date {
    color: $grey-light;
@@ -43,4 +62,8 @@
 
 .card {
   border-radius: 6px;
+}
+
+.footer {
+  padding: 1rem 1.5rem 1rem;
 }

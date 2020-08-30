@@ -1,33 +1,64 @@
 <template>
   <div>
-    <div>
-      <h1 class="title">nuxt-blog-example</h1>
+    <section class="hero is-medium is-link">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-1 is-spaced">
+            Hola!
+          </h1>
+          <figure class="image my-6">
+            <img
+              class="profile-pic is-rounded has-shadow"
+              src="https://res.cloudinary.com/rserrano/image/upload/v1598652059/roberto-serrano-desarrolloweb-tarragona.jpg"
+              alt="Roberto Serrano desarrollo web Tarragona"
+            />
+          </figure>
+          <h2 class="subtitle">
+            <p>
+              Mi nombre es Roberto Serrano.
+            </p>
+            <p>
+              Un Full Stack Web Developer viviendo en Tarragona, España.
+            </p>
+            <p>
+              Desde 2012, llevo desarrollando aplicaciones web y he ayudado a
+              muchas personas a lograr cosas innovadoras en la Web.
+            </p>
+            <p>
+              Principalmente trabajo con herramientas y frameworks modernos como
+              Wordpress, VueJs, Angular...
+            </p>
+            <p>
+              Ultimamente enamorado de JAMStack.
+            </p>
+            <p>
+              Puedes leer más
+              <a href="/sobre-mi">sobre mi</a> o consultar algunos de mis
+              <a href="/proyectos">proyectos.</a>
+            </p>
+          </h2>
+        </div>
+      </div>
+    </section>
+    <div class="section">
+      <h2 class="title is-4">📒 Ultimos artículos en el blog</h2>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
         <div>
           <div
             v-for="(doc, index) in docs"
             :key="index"
             @click="goToDoc(doc.slug)"
           >
-            <h1>{{ doc.title }}</h1>
-            <img class="post-image" :src="doc.picture" alt />
-            <p>{{ doc.description }}</p>
+            <h2 class="has-text-weight-bold">
+              <span class="has-text-weight-bold is-size-5">#</span>
+              {{ doc.title }}
+              -
+              <span class="has-text-weight-normal is-italic">
+                {{ formatDate(doc.updatedAt) }}
+              </span>
+            </h2>
+            <!-- <img class="post-image" :src="doc.picture" alt />
+            <p>{{ doc.description }}</p> -->
           </div>
         </div>
       </div>
@@ -45,30 +76,24 @@ export default {
     goToDoc(slug) {
       this.$router.push({ path: `/blog/${slug}` })
     },
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleDateString('es', options)
+    },
+  },
+  head: {
+    title: 'Mi blog con Nuxtjs',
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
 .links {
   padding-top: 15px;
+  h2 {
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
 }
 .post-image {
   width: 200px;
