@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Header />
     <article class="section is-medium">
       <header>
         <div class="title-container mb-4">
