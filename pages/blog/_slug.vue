@@ -51,7 +51,6 @@
         <author :author="article.author" />
       </div>
     </article>
-    <Footer />
   </div>
 </template>
 
