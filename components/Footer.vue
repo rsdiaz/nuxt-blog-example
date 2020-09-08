@@ -5,7 +5,7 @@
         <ul>
           <li class="is-inline-block">
             <a
-              class="navbar-item is-hidden-desktop"
+              class="navbar-item"
               href="https://github.com/jgthms/bulma"
               target="_blank"
             >
@@ -16,7 +16,7 @@
           </li>
           <li class="is-inline-block">
             <a
-              class="navbar-item is-hidden-desktop"
+              class="navbar-item"
               href="https://twitter.com/jgthms"
               target="_blank"
             >
@@ -27,7 +27,7 @@
           </li>
           <li class="is-inline-block">
             <a
-              class="navbar-item is-hidden-desktop"
+              class="navbar-item"
               href="https://github.com/jgthms/bulma"
               target="_blank"
             >
@@ -38,7 +38,7 @@
           </li>
           <li class="is-inline-block">
             <a
-              class="navbar-item is-hidden-desktop"
+              class="navbar-item"
               href="https://github.com/jgthms/bulma"
               target="_blank"
             >

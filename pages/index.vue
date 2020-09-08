@@ -40,7 +40,7 @@
         </div>
       </div>
     </section>
-    <div class="section">
+    <div class="section is-large">
       <h2 class="title is-4">📒 Ultimos artículos en el blog</h2>
       <div class="links">
         <div>
