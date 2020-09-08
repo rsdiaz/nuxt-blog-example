@@ -20,8 +20,8 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <nuxt-link to="/" :class="'navbar-item'">Home</nuxt-link>
-        <nuxt-link to="/blog" :class="'navbar-item'">Blog</nuxt-link>
+        <nuxt-link to="/" :class="'navbar-item tg-menu'">Home</nuxt-link>
+        <nuxt-link to="/blog" :class="'navbar-item tg-menu'">Blog</nuxt-link>
       </div>
 
       <div class="navbar-end">
@@ -44,7 +44,7 @@ export default {
       document.querySelectorAll('.navbar-burger'),
       0
     )
-    const navbarItems = document.querySelectorAll('.navbar-item')
+    const navbarItems = document.querySelectorAll('.tg-menu')
 
     if ($navbarBurgers.length > 0) {
       $navbarBurgers.forEach((el) => {

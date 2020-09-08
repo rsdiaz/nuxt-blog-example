@@ -18,7 +18,7 @@
               Mi nombre es Roberto Serrano.
             </p>
             <p>
-              Un Full Stack Web Developer viviendo en Tarragona, España.
+              Soy un desarrollador web viviendo en Tarragona, España.
             </p>
             <p>
               Desde 2012, llevo desarrollando aplicaciones web y he ayudado a
@@ -61,6 +61,9 @@
             <p>{{ doc.description }}</p> -->
           </div>
         </div>
+        <nuxt-link to="/blog">
+          Leer todas las entradas
+        </nuxt-link>
       </div>
     </div>
   </div>

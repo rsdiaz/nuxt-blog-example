@@ -56,14 +56,14 @@ $family-sans-serif : 'Montserrat', sans-serif;
   }  
 }
 
+.section {
+  padding: 5rem 1.5rem;
+}
+
 .card, .box, .message {
   border: 1px solid #eee;
 }
 
 .card {
   border-radius: 6px;
-}
-
-.footer {
-  padding: 1rem 1.5rem 1rem;
 }
