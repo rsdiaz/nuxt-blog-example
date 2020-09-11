@@ -4,6 +4,9 @@
 $family-sans-serif : 'Montserrat',
 sans-serif;
 
+$primary : #02779E;
+$secondary : #FAF0E3;
+
 // Import only what you need from Bulma
 
 /* @import "~bulma/sass/utilities/_all.sass";
@@ -23,35 +26,122 @@ sans-serif;
 
 @import "~bulma";
 
-.icon.icon-link {
-  display: none;
+html,
+body {
+  min-height: 100vh;
+  overflow: initial;
 }
 
-.hero {
-  p {
-    margin-top: 1rem;
-  }
+body {
+  background: $white-ter;
+}
+//
+// Navbar
+//
+nav.navbar {
+  max-width: 960px;
+  margin: 0 auto;
+}
 
-  .profile-pic {
-    margin: 0 auto;
-    width: 170px;
-    height: 170px;
-  }
+.navbar-menu.is-active {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
 
+.hero.column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //background: url(https://res.cloudinary.com/rserrano/image/upload/v1599777224/blog/kyle-sung-oQuP_XBjOMY-unsplash_aqmowb.jpg);
+  //background-size: contain;
+  //background-origin: content-box;
+  background: $white-ter;
+  text-align: center;
+  font-size: 3rem;
+  .container {
+    flex-grow: initial;
+  }
+  h1 {
+    font-weight: 700;
+  }
   a {
-    text-decoration: underline;
+    color: $primary;
+    transition: 0.5s all ease-in-out;
+    &:hover {
+      color: #363636;
+    }
+  }
+  @include tablet {
+    padding: 0.75rem 2rem;
+  }
+}
+
+.hero.column-right {
+  padding: 0.75rem;
+  p {
+    margin-top: 22px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .subtitle {
+    font-size: 1.15rem;
+  }
+
+  .container {
+    max-width: 650px;
   }
 
   @include mobile {
-    .title {
-      text-align: center;
+    min-height: 95vh;
+  }
+
+  @include tablet {
+    padding: 0.75rem 2rem;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .container {
+      flex-grow: initial;
     }
   }
 }
 
-.title-container {
-  .date {
-    color: $grey-light;
+.hero.is-primary .navbar-item {
+  color: white;
+}
+
+.columns {
+  margin: 0;
+}
+
+.icon.icon-link {
+  display: none;
+}
+
+.profile-pic.is-rounded.has-shadow {
+  margin: 0 auto;
+  width: 128px;
+}
+
+.hero.is-primary a.navbar-item:hover {
+  background-color: #02779e;
+  color: #f9f9f9e5;
+}
+
+.date {
+  color: $grey-light;
+}
+
+.footer {
+  background-color: #02779e;
+  padding: 2rem 1.5rem 1rem;
+
+  @include mobile {
+    padding: 7rem 4.5rem 6rem;
   }
 }
 
@@ -70,20 +160,46 @@ sans-serif;
 .card {
   border-radius: 6px;
 }
-
-// Blog
+//
+// Blog Page
+//
+section.section.blog-page {
+  max-width: 960px;
+  margin: 0 auto;
+}
 .blog-list {
   margin-bottom: 2rem;
+}
+.column.blog-list.is-full {
+  flex: auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+}
+.card.column.blog-list.is-half {
+  width: calc(50% - 2rem);
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .blog-excerpt {
   padding: 1rem 1.5rem;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  height: calc(100% - 250px);
   display: flex;
   flex-direction: column;
 }
 
 .blog-excerpt-bottom {
   align-self: flex-end;
+}
+
+
+@include mobile {
+  .card.column.blog-list.is-full,
+  .card.column.blog-list.is-half {
+    width: 100%;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
 }

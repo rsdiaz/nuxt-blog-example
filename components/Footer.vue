@@ -49,17 +49,6 @@
           </li>
         </ul>
       </div>
-      <p class="is-size-6 has-text-grey is-size-7-mobile">
-        <a href="https://www.robertoserrano.pro">
-          robertoserrano.pro
-        </a>
-        con 💖 para el 🌍 © 2020
-      </p>
     </div>
   </footer>
 </template>
-<style lang="scss" scoped>
-.footer {
-  padding: 1rem 1.5rem 1rem;
-}
-</style>

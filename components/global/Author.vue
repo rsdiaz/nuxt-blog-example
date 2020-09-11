@@ -1,5 +1,5 @@
 <template>
-  <div class="card has-background-info-light">
+  <div class="card author-card has-background-info-light">
     <div class="card-content">
       <div class="media">
         <div class="media-left">
@@ -33,3 +33,9 @@ export default {
   },
 }
 </script>
+<style lang="scss">
+.author-card {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+</style>

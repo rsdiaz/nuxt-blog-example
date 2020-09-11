@@ -1,18 +1,18 @@
 <template>
   <svg
-    width="25"
-    height="25"
+    width="100"
+    height="100"
     xmlns="http://www.w3.org/2000/svg"
-    class="NuxtLogo"
+    class="iconLeft"
   >
     <g>
       <title>background</title>
-      <rect x="-1" y="-1" width="25" height="25" fill="none" />
+      <rect x="-1" y="-1" width="102" height="102" fill="none" />
     </g>
     <g>
       <title>Layer 1</title>
       <g
-        transform="matrix(0.280428, 0, 0, 0.281036, -1.50989, -1.58271)"
+        transform="matrix(1.11083, 0, 0, 1.08276, -5.02956, -5.72059)"
         fill="#02779E"
       >
         <path
@@ -22,15 +22,3 @@
     </g>
   </svg>
 </template>
-<style>
-.NuxtLogo {
-  animation: 1s appear;
-  margin: auto;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-}
-</style>

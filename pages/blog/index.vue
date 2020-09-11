@@ -1,13 +1,14 @@
 <template>
-  <section class="section">
-    <h1 class="title is-1 has-text-centered-touch">Blog</h1>
-    <div class="content">
+  <section class="section blog-page has-background-white-ter">
+    <h1 class="title is-1 has-text-centered">Blog</h1>
+    <div class="columns content blog-list-wrapper">
       <div
         v-for="(article, index) in articles"
         :key="index"
-        class="card blog-list"
+        class="card column blog-list"
+        :class="[isArticleFull(index) ? 'is-full' : 'is-half']"
       >
-        <div class="card-image">
+        <div class="card-image blog-list-image">
           <figure class="image is-4by3">
             <img :src="article.picture" loading="lazy" />
           </figure>
@@ -18,7 +19,7 @@
               {{ article.title }}
             </NuxtLink>
           </h2>
-          <p>{{ formatDate(article.createdAt) }}</p>
+          <p class="date">{{ formatDate(article.createdAt) }}</p>
           <p>{{ article.description }}</p>
           <div class="blog-excerpt-bottom">
             <NuxtLink :to="`/blog/${article.slug}`">
@@ -27,6 +28,8 @@
           </div>
         </div>
       </div>
+      <!-- content author component -->
+      <author :author="articles[0].author" />
     </div>
   </section>
 </template>
@@ -37,9 +40,15 @@ export default {
     return { articles }
   },
   methods: {
+    goToArticle(slug) {
+      return this.$router.push({ path: `/blog/${slug}` })
+    },
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('es', options)
+    },
+    isArticleFull(index) {
+      return Number.isInteger(Math.pow(index, 3) / 3)
     },
   },
 }
@@ -57,6 +66,17 @@ section.section {
   figure {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+.blog-list-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.blog-list-image {
+  img {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
   }
 }
 </style>
