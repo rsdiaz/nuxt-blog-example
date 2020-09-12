@@ -38,6 +38,7 @@
       <!-- content author component -->
       <author :author="articles[0].author" />
     </div>
+    <Footer />
   </section>
 </template>
 <script>

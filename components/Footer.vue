@@ -1,54 +1,18 @@
 <template>
   <footer class="footer">
-    <div class="has-text-centered">
-      <div class="social-footer">
-        <ul>
-          <li class="is-inline-block">
-            <a
-              class="navbar-item"
-              href="https://github.com/jgthms/bulma"
-              target="_blank"
-            >
-              <span class="icon">
-                <IconGithub />
-              </span>
-            </a>
-          </li>
-          <li class="is-inline-block">
-            <a
-              class="navbar-item"
-              href="https://twitter.com/jgthms"
-              target="_blank"
-            >
-              <span class="icon">
-                <IconTwitter />
-              </span>
-            </a>
-          </li>
-          <li class="is-inline-block">
-            <a
-              class="navbar-item"
-              href="https://github.com/jgthms/bulma"
-              target="_blank"
-            >
-              <span class="icon">
-                <IconLinkedin />
-              </span>
-            </a>
-          </li>
-          <li class="is-inline-block">
-            <a
-              class="navbar-item"
-              href="https://github.com/jgthms/bulma"
-              target="_blank"
-            >
-              <span class="icon">
-                <IconMail />
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
+    <div class="content has-text-centered">
+      <p>
+        <strong>robertoserrano.dev</strong> by
+        <a href="https://jgthms.com">Roberto Serrano</a>
+        con 💖 para el 🌍 © 2020
+      </p>
+      <Social />
     </div>
   </footer>
 </template>
+<style lang="scss" scoped>
+.footer {
+  background: transparent;
+  padding: 3rem 1.5rem 1rem;
+}
+</style>

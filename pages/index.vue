@@ -43,7 +43,7 @@
               <a href="/proyectos">proyectos.</a>
             </p>
           </h2>
-          <Footer />
+          <Social />
         </div>
       </div>
     </div>
@@ -67,3 +67,8 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+.hero {
+  justify-content: center;
+}
+</style>

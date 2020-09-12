@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <article class="section is-medium">
+  <div class="card section blog-page">
+    <article>
       <header>
         <div class="title-container mb-4">
           <div
@@ -69,6 +69,56 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.section.blog-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  background: $white;
+}
+.title-container,
+.background-cover {
+  height: calc(100vh - 77px);
+}
+.background-cover {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0s linear;
+  transition-property: all;
+  transition-property: background-position;
+}
+.background-shroud {
+  background: linear-gradient(
+    to top,
+    rgba(17, 17, 17, 0.8),
+    rgba(17, 17, 17, 0.5),
+    transparent,
+    transparent
+  );
+  height: calc(100vh - 77px);
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  p.title {
+    text-align: center;
+    color: #fbfbfb;
+    font-size: 4vw;
+    text-shadow: 2px 2px 2px #111;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15%;
+    max-width: 80%;
+    margin: auto;
+  }
+  p.date {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 58px;
+    color: $white-ter;
+  }
+}
 .nuxt-content {
   h2,
   h3,

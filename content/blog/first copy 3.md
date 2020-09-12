@@ -1,5 +1,5 @@
 ---
-title: Mi primer post con Nuxt
+title: Efectos al hacer scroll con CSS y JavaScript
 description: 'Este es mi primer artículo del blog con Nuxt y nuxt-content escrito
 con Markdown'
 picture: https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
