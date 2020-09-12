@@ -32,13 +32,15 @@ export default {
   css: ['~assets/scss/main.scss'],
   styleResources: {
     // your settings here
-    scss: [],
+    scss: ['~assets/scss/variables/variables.scss']
   },
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [
+    '~plugins/vue-clazy-load',
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -55,12 +57,12 @@ export default {
     '@nuxtjs/style-resources',
   ],
   /*
-   ** Nuxt.js modules
-   */
-  modules: [
-    '@nuxtjs/pwa',
-    // Doc: https://github.com/nuxt/content
-    '@nuxt/content',
+  ** Nuxt.js modules
+  */
+ modules: [
+   '@nuxtjs/pwa',
+   // Doc: https://github.com/nuxt/content
+   '@nuxt/content',
   ],
   /*
    ** Content module configuration

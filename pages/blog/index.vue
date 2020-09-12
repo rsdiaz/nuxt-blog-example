@@ -10,19 +10,26 @@
       >
         <div class="card-image blog-list-image">
           <figure class="image is-4by3">
-            <img :src="article.picture" loading="lazy" />
+            <clazy-load :src="article.picture">
+              <transition name="fade">
+                <img :src="article.picture" />
+              </transition>
+              <transition slot="placeholder" name="fade">
+                <div slot="placeholder">Loading....</div>
+              </transition>
+            </clazy-load>
           </figure>
         </div>
         <div class="blog-excerpt">
-          <h2 class="title is-4">
-            <NuxtLink :to="`/blog/${article.slug}`">
+          <h2 class="title is-4 mt-4">
+            <NuxtLink :to="`/blog/${article.slug}`" class="has-text-primary">
               {{ article.title }}
             </NuxtLink>
           </h2>
           <p class="date">{{ formatDate(article.createdAt) }}</p>
           <p>{{ article.description }}</p>
           <div class="blog-excerpt-bottom">
-            <NuxtLink :to="`/blog/${article.slug}`">
+            <NuxtLink :to="`/blog/${article.slug}`" class="has-text-primary">
               Leer más
             </NuxtLink>
           </div>
@@ -54,6 +61,14 @@ export default {
 }
 </script>
 <style lang="scss">
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
 section.section {
   h1.title {
     margin-bottom: 3rem;
@@ -75,8 +90,12 @@ section.section {
 }
 .blog-list-image {
   img {
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-radius: 2px;
+  }
+}
+.blog-excerpt {
+  .date {
+    font-size: 0.85rem;
   }
 }
 </style>

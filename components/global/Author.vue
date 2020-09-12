@@ -33,9 +33,11 @@ export default {
   },
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .author-card {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  @include tablet {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 </style>

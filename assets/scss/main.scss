@@ -1,30 +1,27 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-$family-sans-serif : 'Montserrat',
-sans-serif;
+@import "./variables/variables.scss";
 
-$primary : #02779E;
-$secondary : #FAF0E3;
-
-// Import only what you need from Bulma
-
-/* @import "~bulma/sass/utilities/_all.sass";
 @import "~bulma/sass/base/_all.sass";
+@import "~bulma/sass/components/navbar.sass";
+@import "~bulma/sass/components/card.sass";
+@import "~bulma/sass/components/media.sass";
+@import "~bulma/sass/grid/columns.sass";
+@import "~bulma/sass/elements/title.sass";
+@import "~bulma/sass/elements/image.sass";
+@import "~bulma/sass/elements/content.sass";
+@import "~bulma/sass/layout/hero.sass";
+@import "~bulma/sass/layout/section.sass";
+@import "~bulma/sass/helpers/_all.sass";
+
+/* 
 @import "~bulma/sass/elements/button.sass";
 @import "~bulma/sass/elements/container.sass";
-@import "~bulma/sass/elements/title.sass";
-@import "~bulma/sass/elements/content.sass";
-@import "~bulma/sass/elements/image.sass";
 @import "~bulma/sass/elements/icon.sass";
-@import "~bulma/sass/form/_all.sass";
-@import "~bulma/sass/grid/columns.sass";
-@import "~bulma/sass/components/navbar.sass";
-@import "~bulma/sass/layout/hero.sass";
-@import "~bulma/sass/helpers/typography.sass";
-@import "~bulma/sass/helpers/color.sass"; */
+@import "~bulma/sass/form/_all.sass"; */
 
-@import "~bulma";
+// @import "~bulma";
 
 html,
 body {
@@ -91,6 +88,7 @@ nav.navbar {
 
   .container {
     max-width: 650px;
+    margin: 0 auto;
   }
 
   @include mobile {
@@ -172,14 +170,17 @@ section.section.blog-page {
 }
 .column.blog-list.is-full {
   flex: auto;
-  margin-left: 1rem;
-  margin-right: 1rem;
-
+  @include tablet {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 .card.column.blog-list.is-half {
   width: calc(50% - 2rem);
-  margin-left: 1rem;
-  margin-right: 1rem;
+  @include tablet {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 .blog-excerpt {
   padding: 1rem 1.5rem;

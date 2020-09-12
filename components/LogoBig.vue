@@ -1,10 +1,5 @@
 <template>
-  <svg
-    width="100"
-    height="100"
-    xmlns="http://www.w3.org/2000/svg"
-    class="iconLeft"
-  >
+  <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" class="Logo">
     <g>
       <title>background</title>
       <rect x="-1" y="-1" width="102" height="102" fill="none" />
@@ -22,3 +17,15 @@
     </g>
   </svg>
 </template>
+<style>
+.Logo {
+  animation: 1s appear;
+  margin: auto;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+}
+</style>
